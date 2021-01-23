@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+$mainFont: 'Raleway', sans-serif;
+$handWritten: 'Dancing Script', cursive;
+$mainColor: rgba(51, 51, 51, 1);
+$fontColor: rgba(171, 145, 120, 1);
+*{
+    font-size: 62.5%;
+    color: $fontColor;
+    a{
+        font-family: $mainFont;
+        text-decoration: none;
+        color: $fontColor;
+        font-size: 1.6rem;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    header{
+        height: 40rem;
+        background-color: $mainColor;
+        #logo-header{
+            padding-top: 10rem;
+            text-align: center;
+        }
+        nav{
+            ul{
+                
+                display: flex;
+                justify-content: center;
+                margin: 2.5rem 0;
+                padding: 0;
+                li{
+                    display: block;
+                    margin: 0 1.5rem;
+                    a{
+                        font-size: 3rem;
+                    }
+                    a:hover{
+                        color:  rgb(197, 167, 138);
+                    }
+                }
+            }
+        }
+    }
+    /*-------------HEADER END------------------------*/
+    .main-wrapper{
+        #home-page-wrapper{
+            display: flex;
+            background-color: $mainColor;
+            padding: 2rem 0;
+            #hp-welcome-message{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h1, h2{
+                    font-weight: 400;
+                    font-family: $handWritten;
+                    line-height: 2;
+                    letter-spacing: .5rem;
+                    text-align: center;
+                }
+                h1{
+                    font-size: 4rem;
+                    width: 80%;
+                    max-width: 100%;
+                }
+                h2{
+                    font-size: 2rem;
+                }
+            }
+            #hp-welcome-image{
+                background-image: url("../img/home_page_pic.jpg");
+                background-size: cover;
+                width: 40%;
+                height: 80rem;
+                margin: 1rem auto;
+                border: 2px solid $fontColor;
+            }
+        }
+        /*--------HOME PAGE END----------*/
+        #about-us-page-wrapper{
+            padding: 15rem 0;
+            background-color: $mainColor;
+            .container{
+                width: 80%;
+                margin: 2rem auto;
+                display: flex;
+                .about-us-text{
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        font-size: 2.5rem;
+                        width: 55rem;
+                        line-height: 1.5;
+                        letter-spacing: .4rem;
+                        text-align: center;
+                    }
+                }
+                .about-us-pic{
+                    width: 60rem;
+                    height: 90rem;
+                    margin: 0 auto;
+                    border: 1px solid $fontColor;
+                    background-size: cover;
+                    background-repeat: no-repeat; 
+                }
+                #about-us-first-pic{
+                    background-image: url(../img/about_us_wine.jpg);
+                }
+                #about-us-second-pic{
+                    background-image: url(../img/about_us_food.jpg);
+                    height: 40rem;
+                }
+                #about-us-third-pic{
+                    background-image: url(../img/about_us_coffe.jpg);
+                }
+            }
+        }
+    }
+}
