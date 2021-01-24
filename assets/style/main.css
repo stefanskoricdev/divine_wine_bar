@@ -10,6 +10,8 @@
     font-size: 1.6rem; }
   * h1 {
     font-size: 4rem; }
+  * h2 {
+    font-size: 3rem; }
 
 body {
   margin: 0;
@@ -19,7 +21,8 @@ body {
   /*-------MAIN SECTION END--------*/ }
   body header {
     height: 40rem;
-    background-color: #333333; }
+    background-color: #333333;
+    opacity: 1; }
     body header #logo-header {
       padding-top: 10rem;
       text-align: center; }
@@ -32,12 +35,65 @@ body {
         display: block;
         margin: 0 1.5rem; }
         body header nav ul li a {
-          font-size: 3rem; }
+          font-size: 3rem;
+          padding: .5rem;
+          border-radius: .5rem;
+          -webkit-transition: 400ms;
+          -moz-transition: 400ms;
+          -ms-transition: 400ms;
+          -o-transition: 400ms;
+          transition: 400ms; }
         body header nav ul li a:hover {
-          color: #c5a78a; }
+          color: #333333;
+          background-color: #ab9178; }
+  body header.active {
+    height: 13rem;
+    background-color: #ab9178;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0rem 0rem 1rem 1rem;
+    opacity: .9; }
+    body header.active #logo-header {
+      width: 25rem;
+      height: 100%;
+      padding: 0;
+      background-image: url(../img/logo_dark.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+      body header.active #logo-header a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+        body header.active #logo-header a img {
+          display: none; }
+    body header.active nav a {
+      color: #333333; }
+    body header.active nav a:hover {
+      color: #ab9178;
+      background-color: #333333; }
   body .main-wrapper {
     /*--------HOME PAGE END----------*/
     /*--------ABOUT US PAGE END----------*/ }
+    body .main-wrapper .page-title {
+      text-transform: uppercase;
+      letter-spacing: .3rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      font-family: "Dancing Script", cursive; }
+    body .main-wrapper .page-title::after {
+      content: "";
+      width: 8rem;
+      height: .2rem;
+      background-color: #ab9178;
+      margin: .5rem auto; }
     body .main-wrapper #home-page-wrapper {
       position: relative;
       display: flex;
@@ -48,7 +104,8 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        opacity: 0; }
         body .main-wrapper #home-page-wrapper #hp-welcome-message h1, body .main-wrapper #home-page-wrapper #hp-welcome-message h2 {
           font-weight: 400;
           font-family: "Dancing Script", cursive;
@@ -67,7 +124,22 @@ body {
         width: 40%;
         height: 90rem;
         margin: 1rem auto;
-        border: 2px solid #ab9178; }
+        border: 2px solid #ab9178;
+        opacity: 0; }
+    body .main-wrapper #home-page-wrapper.active #hp-welcome-message {
+      opacity: 1;
+      -webkit-transition: opacity 1s linear;
+      -moz-transition: opacity 1s linear;
+      -ms-transition: opacity 1s linear;
+      -o-transition: opacity 1s linear;
+      transition: opacity 1s linear; }
+    body .main-wrapper #home-page-wrapper.active #hp-welcome-image {
+      opacity: 1;
+      -webkit-transition: opacity 1s linear;
+      -moz-transition: opacity 1s linear;
+      -ms-transition: opacity 1s linear;
+      -o-transition: opacity 1s linear;
+      transition: opacity 1s linear; }
     body .main-wrapper #home-page-wrapper::after {
       content: "";
       width: 50%;
@@ -80,18 +152,6 @@ body {
       position: relative;
       padding: 15rem 0;
       background-color: #333333; }
-      body .main-wrapper #about-us-page-wrapper h1 {
-        text-transform: uppercase;
-        letter-spacing: .3rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column; }
-      body .main-wrapper #about-us-page-wrapper h1::after {
-        content: "";
-        width: 8rem;
-        height: .2rem;
-        background-color: #ab9178;
-        margin: .5rem auto; }
       body .main-wrapper #about-us-page-wrapper .container {
         width: 80%;
         margin: 2rem auto;
@@ -100,7 +160,8 @@ body {
           width: 50%;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: center;
+          opacity: 0; }
           body .main-wrapper #about-us-page-wrapper .container .about-us-text p {
             font-size: 2.5rem;
             width: 55rem;
@@ -113,7 +174,8 @@ body {
           margin: 0 auto;
           border: 1px solid #ab9178;
           background-size: cover;
-          background-repeat: no-repeat; }
+          background-repeat: no-repeat;
+          opacity: 0; }
         body .main-wrapper #about-us-page-wrapper .container #about-us-first-pic {
           background-image: url(../img/about_us_wine.jpg); }
         body .main-wrapper #about-us-page-wrapper .container #about-us-second-pic {
@@ -121,6 +183,20 @@ body {
           height: 40rem; }
         body .main-wrapper #about-us-page-wrapper .container #about-us-third-pic {
           background-image: url(../img/about_us_coffe.jpg); }
+      body .main-wrapper #about-us-page-wrapper .container.active .about-us-pic {
+        opacity: 1;
+        -webkit-transition: opacity 800ms linear;
+        -moz-transition: opacity 800ms linear;
+        -ms-transition: opacity 800ms linear;
+        -o-transition: opacity 800ms linear;
+        transition: opacity 800ms linear; }
+      body .main-wrapper #about-us-page-wrapper .container.active .about-us-text {
+        opacity: 1;
+        -webkit-transition: opacity 800ms linear 300ms;
+        -moz-transition: opacity 800ms linear 300ms;
+        -ms-transition: opacity 800ms linear 300ms;
+        -o-transition: opacity 800ms linear 300ms;
+        transition: opacity 800ms linear 300ms; }
     body .main-wrapper #about-us-page-wrapper::after {
       content: "";
       width: 50%;
@@ -134,18 +210,9 @@ body {
       height: 90rem;
       background-color: #333333;
       padding: 15rem 0; }
-      body .main-wrapper #gallery-wrapper h1 {
-        text-transform: uppercase;
-        letter-spacing: .3rem;
+      body .main-wrapper #gallery-wrapper h2 {
         text-align: center;
-        display: flex;
-        flex-direction: column; }
-      body .main-wrapper #gallery-wrapper h1::after {
-        content: "";
-        width: 8rem;
-        height: .2rem;
-        background-color: #ab9178;
-        margin: .5rem auto; }
+        font-weight: 400; }
       body .main-wrapper #gallery-wrapper #carousel-wrapper {
         width: 60rem;
         max-width: 100%;
@@ -330,5 +397,26 @@ body {
     -ms-transform: translateZ(-90rem) rotate3d(0, 1, 0, 360deg);
     -o-transform: translateZ(-90rem) rotate3d(0, 1, 0, 360deg);
     transform: translateZ(-90rem) rotate3d(0, 1, 0, 360deg); } }
+@keyframes header-animation {
+  from {
+    height: 10rem; }
+  to {
+    height: 40rem; } }
+@keyframes sticky-header-animation {
+  0% {
+    height: 0;
+    opacity: 0; }
+  25% {
+    height: 4rem;
+    opacity: 0; }
+  50% {
+    height: 8rem;
+    opacity: 0; }
+  75% {
+    height: 13rem;
+    opacity: .5; }
+  100% {
+    height: 13rem;
+    opacity: 0.95; } }
 
 /*# sourceMappingURL=main.css.map */

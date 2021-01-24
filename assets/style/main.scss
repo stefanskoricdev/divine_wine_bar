@@ -16,40 +16,32 @@ $fontColor: rgba(171, 145, 120, 1);
     h1{
         font-size: 4rem;
     }
+    h2{
+        font-size: 3rem;
+    }
 }
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    header{
-        height: 40rem;
-        background-color: $mainColor;
-        #logo-header{
-            padding-top: 10rem;
-            text-align: center;
-        }
-        nav{
-            ul{
-                
-                display: flex;
-                justify-content: center;
-                margin: 2.5rem 0;
-                padding: 0;
-                li{
-                    display: block;
-                    margin: 0 1.5rem;
-                    a{
-                        font-size: 3rem;
-                    }
-                    a:hover{
-                        color:  rgb(197, 167, 138);
-                    }
-                }
-            }
-        }
-    }
+    @import "partials/header";
     /*-------------HEADER END------------------------*/
     .main-wrapper{
+        .page-title{
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            font-family: $handWritten;
+        }
+        .page-title::after{
+            content: "";
+            width: 8rem;
+            height: .2rem;
+            background-color: $fontColor;
+            margin: .5rem auto;
+        }
         #home-page-wrapper{
             position: relative;
             display: flex;
@@ -61,6 +53,7 @@ body{
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                opacity: 0;
                 h1, h2{
                     font-weight: 400;
                     font-family: $handWritten;
@@ -84,6 +77,25 @@ body{
                 height: 90rem;
                 margin: 1rem auto;
                 border: 2px solid $fontColor;
+                opacity: 0;
+            }
+        }
+        #home-page-wrapper.active{
+            #hp-welcome-message{
+                opacity: 1;
+                -webkit-transition: opacity 1s linear;
+                -moz-transition: opacity 1s linear;
+                -ms-transition: opacity 1s linear;
+                -o-transition: opacity 1s linear;
+                transition: opacity 1s linear;
+            }
+            #hp-welcome-image{
+                opacity: 1;
+                -webkit-transition: opacity 1s linear;
+                -moz-transition: opacity 1s linear;
+                -ms-transition: opacity 1s linear;
+                -o-transition: opacity 1s linear;
+                transition: opacity 1s linear;
             }
         }
         #home-page-wrapper::after{
@@ -100,20 +112,6 @@ body{
             position: relative;
             padding: 15rem 0;
             background-color: $mainColor;
-            h1{
-                text-transform: uppercase;
-                letter-spacing: .3rem;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-            }
-            h1::after{
-                content: "";
-                width: 8rem;
-                height: .2rem;
-                background-color: $fontColor;
-                margin: .5rem auto;
-            }
             .container{
                 width: 80%;
                 margin: 2rem auto;
@@ -123,6 +121,7 @@ body{
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    opacity: 0;
                     p{
                         font-size: 2.5rem;
                         width: 55rem;
@@ -138,6 +137,7 @@ body{
                     border: 1px solid $fontColor;
                     background-size: cover;
                     background-repeat: no-repeat; 
+                    opacity: 0;
                 }
                 #about-us-first-pic{
                     background-image: url(../img/about_us_wine.jpg);
@@ -148,6 +148,24 @@ body{
                 }
                 #about-us-third-pic{
                     background-image: url(../img/about_us_coffe.jpg);
+                }
+            }
+            .container.active{
+                .about-us-pic{
+                    opacity: 1;
+                    -webkit-transition: opacity 800ms linear;
+                    -moz-transition: opacity 800ms linear;
+                    -ms-transition: opacity 800ms linear;
+                    -o-transition: opacity 800ms linear;
+                    transition: opacity 800ms linear;
+                }
+                .about-us-text{
+                    opacity: 1;
+                    -webkit-transition: opacity 800ms linear 300ms;
+                    -moz-transition: opacity 800ms linear 300ms;
+                    -ms-transition: opacity 800ms linear 300ms;
+                    -o-transition: opacity 800ms linear 300ms;
+                    transition: opacity 800ms linear 300ms;
                 }
             }
         }
@@ -166,22 +184,11 @@ body{
             height: 90rem;
             background-color: $mainColor;
             padding: 15rem 0;
-            h1{
-                text-transform: uppercase;
-                letter-spacing: .3rem;
+            h2{
                 text-align: center;
-                display: flex;
-                flex-direction: column;
+                font-weight: 400;
             }
-            h1::after{
-                content: "";
-                width: 8rem;
-                height: .2rem;
-                background-color: $fontColor;
-                margin: .5rem auto;
-            }
-
-            @import "carousel";
+            @import 'partials/carousel';
         }
     }
     /*-------MAIN SECTION END--------*/
@@ -229,68 +236,4 @@ body{
         }
     }
 }
-@keyframes carousel-animation {
-    0%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
-    }
-    12.5%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,45deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,45deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,45deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,45deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,45deg);
-    }
-    25%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,90deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,90deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,90deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,90deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,90deg);
-    }
-    37.5%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,135deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,135deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,135deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,135deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,135deg);
-    }
-    50%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,180deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,180deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,180deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,180deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,180deg);
-    }
-    62.5%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,225deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,225deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,225deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,225deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,225deg);
-    }
-    75%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,270deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,270deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,270deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,270deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,270deg);
-    }
-    87.5%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,315deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,315deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,315deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,315deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,315deg);
-    }
-    100%{
-        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,360deg);
-        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,360deg);
-        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,360deg);
-        -o-transform: translateZ(-90rem) rotate3d(0,1,0,360deg);
-        transform: translateZ(-90rem) rotate3d(0,1,0,360deg);
-    }
-}
+@import "partials/keyframes";
