@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiVine Wine Bar</title>
     <link rel="stylesheet" href="assets/style/main.css">
+    <script src="https://kit.fontawesome.com/d025e4f1ed.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,9 +16,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="#home-page-wrapper">Home</a></li>
+                <li><a href="#about-us-page-wrapper">About Us</a></li>
+                <li><a href="#gallery-wrapper">Gallery</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -37,7 +38,9 @@
                 <!--Will display image in background-->
             </div>
         </div>
+
         <div id="about-us-page-wrapper">
+            <h1>About us</h1>
             <div class="first-line-content container">
                 <div class="about-us-text">
                     <p>~ DiVine wine bar is a newly opened bar in the hearth of our city. Its modern interior design and
@@ -72,7 +75,41 @@
             </div>
             <!--THIRD LINE END-->
         </div>
+
+        <div id="gallery-wrapper">
+            <h1>Gallery</h1>
+            <div id="carousel-wrapper">
+                <div id="carousel-container">
+                    <div class="carousel-image" id="image1"></div>
+                    <div class="carousel-image" id="image2"></div>
+                    <div class="carousel-image" id="image3"></div>
+                    <div class="carousel-image" id="image4"></div>
+                    <div class="carousel-image" id="image5"></div>
+                    <div class="carousel-image" id="image6"></div>
+                    <div class="carousel-image" id="image7"></div>
+                    <div class="carousel-image" id="image8"></div>
+                </div>
+            </div>
+        </div>
     </section>
+    <footer>
+        <div class="footer-info">
+            <address>Sime Solaje 1b,</br> 78000 Banja Luka</address>
+            <div class="footer-logo">
+                <!--Pic will be in background-->
+            </div>
+            <div class="footer-contact-info">
+                <p>Phone: +38765 00 00 00 0</p>
+                <p>Email: something@something.com</p>
+            </div>
+        </div>
+        <div id="footer-social-network">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="assets/script/carousel.js"></script>
 </body>
 
 </html>

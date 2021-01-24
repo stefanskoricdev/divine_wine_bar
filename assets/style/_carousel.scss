@@ -1,0 +1,104 @@
+#carousel-wrapper{
+    width: 60rem;
+    max-width: 100%;
+    margin: 25rem auto;
+    height: 42rem;
+    position: relative;
+    perspective: 150rem;
+    #carousel-container{
+        -webkit-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
+        -moz-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
+        -ms-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
+        -o-transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
+        transform: translateZ(-90rem) rotate3d(0,1,0,0deg);
+        transform-style: preserve-3d;
+        -webkit-animation: carousel-animation 24s ease-in-out infinite 1s;
+        -moz-animation: carousel-animation 24s ease-in-out infinite 1s;
+        -ms-animation: carousel-animation 24s ease-in-out infinite 1s;
+        -o-animation: carousel-animation 24s ease-in-out infinite 1s;
+        animation: carousel-animation 24s ease-in-out infinite 1s;
+        .carousel-image{
+            width: 60rem;
+            max-width: 100%;
+            height: 42rem;
+            border-radius: 10px;
+            position: absolute;
+            opacity: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            -webkit-transition: transform 200ms linear;
+            -moz-transition: transform 200ms linear;
+            -ms-transition: transform 200ms linear;
+            -o-transition: transform 200ms linear;
+            transition: transform 200ms linear;
+            opacity: .95;
+        }
+        #image1{
+            background-image: url(../img/Carousel/img1.jpg);
+            -webkit-transform: rotateY(0deg) translateZ(90rem);
+            -moz-transform: rotateY(0deg) translateZ(90rem);
+            -ms-transform: rotateY(0deg) translateZ(90rem);
+            -o-transform: rotateY(0deg) translateZ(90rem);
+            transform: rotateY(0deg) translateZ(90rem);
+        }
+        #image2{
+            background-image: url(../img/Carousel/img2.jpg);
+            -webkit-transform: rotateY(45deg) translateZ(90rem);
+            -moz-transform: rotateY(45deg) translateZ(90rem);
+            -ms-transform: rotateY(45deg) translateZ(90rem);
+            -o-transform: rotateY(45deg) translateZ(90rem);
+            transform: rotateY(45deg) translateZ(90rem);
+        }
+        #image3{
+            background-image: url(../img/Carousel/img3.jpg);
+            -webkit-transform: rotateY(90deg) translateZ(90rem);
+            -moz-transform: rotateY(90deg) translateZ(90rem);
+            -ms-transform: rotateY(90deg) translateZ(90rem);
+            -o-transform: rotateY(90deg) translateZ(90rem);
+            transform: rotateY(90deg) translateZ(90rem);
+        }
+        #image4{
+            background-image: url(../img/Carousel/img4.jpg);
+            -webkit-transform: rotateY(135deg) translateZ(90rem);
+            -moz-transform: rotateY(135deg) translateZ(90rem);
+            -ms-transform: rotateY(135deg) translateZ(90rem);
+            -o-transform: rotateY(135deg) translateZ(90rem);
+            transform: rotateY(135deg) translateZ(90rem);
+        }
+        #image5{
+            background-image: url(../img/Carousel/img5.jpg);
+            -webkit-transform: rotateY(180deg) translateZ(90rem);
+            -moz-transform: rotateY(180deg) translateZ(90rem);
+            -ms-transform: rotateY(180deg) translateZ(90rem);
+            -o-transform: rotateY(180deg) translateZ(90rem);
+            transform: rotateY(180deg) translateZ(90rem);
+        }
+        #image6{
+            background-image: url(../img/Carousel/img6.jpg);
+            -webkit-transform: rotateY(225deg) translateZ(90rem);
+            -moz-transform: rotateY(225deg) translateZ(90rem);
+            -ms-transform: rotateY(225deg) translateZ(90rem);
+            -o-transform: rotateY(225deg) translateZ(90rem);
+            transform: rotateY(225deg) translateZ(90rem);
+        }
+        #image7{
+            background-image: url(../img/Carousel/img7.jpg);
+            -webkit-transform: rotateY(270deg) translateZ(90rem);
+            -moz-transform: rotateY(270deg) translateZ(90rem);
+            -ms-transform: rotateY(270deg) translateZ(90rem);
+            -o-transform: rotateY(270deg) translateZ(90rem);
+            transform: rotateY(270deg) translateZ(90rem);
+        }
+        #image8{
+            background-image: url(../img/Carousel/img8.jpg);
+            -webkit-transform: rotateY(315deg) translateZ(90rem);
+            -moz-transform: rotateY(315deg) translateZ(90rem);
+            -ms-transform: rotateY(315deg) translateZ(90rem);
+            -o-transform: rotateY(315deg) translateZ(90rem);
+            transform: rotateY(315deg) translateZ(90rem);
+        }
+    }
+    #carousel-container:hover{
+        animation-play-state: paused;
+    }
+}
