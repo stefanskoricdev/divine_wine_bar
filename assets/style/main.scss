@@ -73,6 +73,7 @@ body{
             #hp-welcome-image{
                 background-image: url("../img/home_page_pic.jpg");
                 background-size: cover;
+                background-position: center;
                 width: 40%;
                 height: 90rem;
                 margin: 1rem auto;
@@ -137,6 +138,7 @@ body{
                     border: 1px solid $fontColor;
                     background-size: cover;
                     background-repeat: no-repeat; 
+                    background-position: center;
                     opacity: 0;
                 }
                 #about-us-first-pic{
@@ -184,6 +186,7 @@ body{
             height: 90rem;
             background-color: $mainColor;
             padding: 15rem 0;
+            overflow: hidden;
             h2{
                 text-align: center;
                 font-weight: 400;
@@ -198,7 +201,7 @@ body{
         background-color: $mainColor;
         padding: 5rem 0;
         .footer-info{
-            width: 50%;
+            width: 100%;
             margin: 0 auto;
             font-size: 3rem;
             display: flex;
@@ -237,3 +240,14 @@ body{
     }
 }
 @import "partials/keyframes";
+@media only screen and (min-width: 300px) and (max-width: 1600px){
+    body{
+        .main-wrapper{
+            #about-us-page-wrapper{
+                .container{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
