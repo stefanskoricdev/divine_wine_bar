@@ -25,11 +25,12 @@ body{
             display: none;
         }
         .burger{
-            width: 10rem;
+            width: 7rem;
             height: 10rem;
             margin: 2.5rem auto;
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-direction: column;
             position: relative;
             .burger-line{
@@ -39,18 +40,78 @@ body{
                 margin: 1rem auto;
                 background-color: $fontColor;
             }
-        }
-        .burger.active{
             #line1{
-                transform: rotateZ(45deg);
-                position: absolute;
+                -webkit-animation: line1-animation 100ms linear;
+                -moz-animation: line1-animation 100ms linear;
+                -ms-animation: line1-animation 100ms linear;
+                -o-animation: line1-animation 100ms linear;
+                animation: line1-animation 100ms linear;
             }
             #line2{
-                display: none;
+                opacity: 1;
+                -webkit-transition: transform 300ms linear, opacity 300ms linear;
+                -moz-transition: transform 300ms linear, opacity 300ms linear;
+                -ms-transition: transform 300ms linear, opacity 300ms linear;
+                -o-transition: transform 300ms linear, opacity 300ms linear;
+                transition: transform 300ms linear, opacity 300ms linear;
             }
             #line3{
-                transform: rotateZ(-45deg);
+                -webkit-animation: line3-animation 100ms linear;
+                -moz-animation: line3-animation 100ms linear;
+                -ms-animation: line3-animation 100ms linear;
+                -o-animation: line3-animation 100ms linear;
+                animation: line3-animation 100ms linear;
+            }
+        }
+        .burger.active{
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+            -webkit-transition: transform 500ms linear;
+            -moz-transition: transform 500ms linear;
+            -ms-transition: transform 500ms linear;
+            -o-transition: transform 500ms linear;
+            transition: transform 500ms linear;
+            #line1{
                 position: absolute;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-animation: burger-line1-animation-active 100ms linear;
+                -moz-animation: burger-line1-animation-active 100ms linear;
+                -ms-animation: burger-line1-animation-active 100ms linear;
+                -o-animation: burger-line1-animation-active 100ms linear;
+                animation: burger-line1-animation-active 100ms linear;
+            }
+            #line2{
+                -webkit-transform: translateX(-1.2vw);
+                -moz-transform: translateX(-1.2vw);
+                -ms-transform: translateX(-1.2vw);
+                -o-transform: translateX(-1.2vw);
+                transform: translateX(-1.2vw);
+                opacity: 0;
+                -webkit-transition: transform 300ms linear, opacity 300ms linear;
+                -moz-transition: transform 300ms linear, opacity 300ms linear;
+                -ms-transition: transform 300ms linear, opacity 300ms linear;
+                -o-transition: transform 300ms linear, opacity 300ms linear;
+                transition: transform 300ms linear, opacity 300ms linear;
+            }
+            #line3{
+                position: absolute;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                -webkit-animation: burger-line3-animation-active 100ms linear;
+                -moz-animation: burger-line3-animation-active 100ms linear;
+                -ms-animation: burger-line3-animation-active 100ms linear;
+                -o-animation: burger-line3-animation-active 100ms linear;
+                animation: burger-line3-animation-active 100ms linear;
             }
         }
         .mobile-nav{
@@ -60,6 +121,16 @@ body{
             left: 0;
             width: 100%;
             background-color:rgba(171, 145, 120, .8);
+            -webkit-transform: translateX(150%);
+            -moz-transform: translateX(150%);
+            -ms-transform: translateX(150%);
+            -o-transform: translateX(150%);
+            transform: translateX(150%);
+            -webkit-transition: transform 300ms linear;
+            -moz-transition: transform 300ms linear;
+            -ms-transition: transform 300ms linear;
+            -o-transition: transform 300ms linear;
+            transition: transform 300ms linear;
             ul{
                 width: 100%;
                 padding: 3rem 0;
@@ -74,6 +145,19 @@ body{
                     }
                 }
             }
+        }
+        .mobile-nav.active{
+            animation: mobile-nav-animation 2s linear;
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+            -webkit-transition: transform 300ms linear;
+            -moz-transition: transform 300ms linear;
+            -ms-transition: transform 300ms linear;
+            -o-transition: transform 300ms linear;
+            transition: transform 300ms linear;
         }
     }
     .main-wrapper{

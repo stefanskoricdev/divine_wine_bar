@@ -18,11 +18,12 @@ body header {
   body header .main-nav {
     display: none; }
   body header .burger {
-    width: 10rem;
+    width: 7rem;
     height: 10rem;
     margin: 2.5rem auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     position: relative; }
     body header .burger .burger-line {
@@ -31,21 +32,89 @@ body header {
       content: "";
       margin: 1rem auto;
       background-color: #ab9178; }
-  body header .burger.active #line1 {
-    transform: rotateZ(45deg);
-    position: absolute; }
-  body header .burger.active #line2 {
-    display: none; }
-  body header .burger.active #line3 {
-    transform: rotateZ(-45deg);
-    position: absolute; }
+    body header .burger #line1 {
+      -webkit-animation: line1-animation 100ms linear;
+      -moz-animation: line1-animation 100ms linear;
+      -ms-animation: line1-animation 100ms linear;
+      -o-animation: line1-animation 100ms linear;
+      animation: line1-animation 100ms linear; }
+    body header .burger #line2 {
+      opacity: 1;
+      -webkit-transition: transform 300ms linear, opacity 300ms linear;
+      -moz-transition: transform 300ms linear, opacity 300ms linear;
+      -ms-transition: transform 300ms linear, opacity 300ms linear;
+      -o-transition: transform 300ms linear, opacity 300ms linear;
+      transition: transform 300ms linear, opacity 300ms linear; }
+    body header .burger #line3 {
+      -webkit-animation: line3-animation 100ms linear;
+      -moz-animation: line3-animation 100ms linear;
+      -ms-animation: line3-animation 100ms linear;
+      -o-animation: line3-animation 100ms linear;
+      animation: line3-animation 100ms linear; }
+  body header .burger.active {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: transform 500ms linear;
+    -moz-transition: transform 500ms linear;
+    -ms-transition: transform 500ms linear;
+    -o-transition: transform 500ms linear;
+    transition: transform 500ms linear; }
+    body header .burger.active #line1 {
+      position: absolute;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-animation: burger-line1-animation-active 100ms linear;
+      -moz-animation: burger-line1-animation-active 100ms linear;
+      -ms-animation: burger-line1-animation-active 100ms linear;
+      -o-animation: burger-line1-animation-active 100ms linear;
+      animation: burger-line1-animation-active 100ms linear; }
+    body header .burger.active #line2 {
+      -webkit-transform: translateX(-1.2vw);
+      -moz-transform: translateX(-1.2vw);
+      -ms-transform: translateX(-1.2vw);
+      -o-transform: translateX(-1.2vw);
+      transform: translateX(-1.2vw);
+      opacity: 0;
+      -webkit-transition: transform 300ms linear, opacity 300ms linear;
+      -moz-transition: transform 300ms linear, opacity 300ms linear;
+      -ms-transition: transform 300ms linear, opacity 300ms linear;
+      -o-transition: transform 300ms linear, opacity 300ms linear;
+      transition: transform 300ms linear, opacity 300ms linear; }
+    body header .burger.active #line3 {
+      position: absolute;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-animation: burger-line3-animation-active 100ms linear;
+      -moz-animation: burger-line3-animation-active 100ms linear;
+      -ms-animation: burger-line3-animation-active 100ms linear;
+      -o-animation: burger-line3-animation-active 100ms linear;
+      animation: burger-line3-animation-active 100ms linear; }
   body header .mobile-nav {
     display: block;
     position: absolute;
     top: 15rem;
     left: 0;
     width: 100%;
-    background-color: rgba(171, 145, 120, 0.8); }
+    background-color: rgba(171, 145, 120, 0.8);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    transform: translateX(150%);
+    -webkit-transition: transform 300ms linear;
+    -moz-transition: transform 300ms linear;
+    -ms-transition: transform 300ms linear;
+    -o-transition: transform 300ms linear;
+    transition: transform 300ms linear; }
     body header .mobile-nav ul {
       width: 100%;
       padding: 3rem 0; }
@@ -57,6 +126,18 @@ body header {
           font-size: 3rem;
           font-weight: 500;
           color: #333333; }
+  body header .mobile-nav.active {
+    animation: mobile-nav-animation 2s linear;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: transform 300ms linear;
+    -moz-transition: transform 300ms linear;
+    -ms-transition: transform 300ms linear;
+    -o-transition: transform 300ms linear;
+    transition: transform 300ms linear; }
 body .main-wrapper {
   padding-top: 15rem; }
   body .main-wrapper #home-page-wrapper {
