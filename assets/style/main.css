@@ -26,15 +26,15 @@ body {
     body header #logo-header {
       padding-top: 10rem;
       text-align: center; }
-    body header nav ul {
+    body header .main-nav ul {
       display: flex;
       justify-content: center;
       margin: 2.5rem 0;
       padding: 0; }
-      body header nav ul li {
+      body header .main-nav ul li {
         display: block;
         margin: 0 1.5rem; }
-        body header nav ul li a {
+        body header .main-nav ul li a {
           font-size: 3rem;
           padding: .5rem;
           border-radius: .5rem;
@@ -43,9 +43,13 @@ body {
           -ms-transition: 400ms;
           -o-transition: 400ms;
           transition: 400ms; }
-        body header nav ul li a:hover {
+        body header .main-nav ul li a:hover {
           color: #333333;
           background-color: #ab9178; }
+    body header .burger {
+      display: none; }
+    body header .mobile-nav {
+      display: none; }
   body header.active {
     height: 13rem;
     background-color: #ab9178;
@@ -73,9 +77,9 @@ body {
         height: 100%; }
         body header.active #logo-header a img {
           display: none; }
-    body header.active nav a {
+    body header.active .main-nav a {
       color: #333333; }
-    body header.active nav a:hover {
+    body header.active .main-nav a:hover {
       color: #ab9178;
       background-color: #333333; }
   body .main-wrapper {

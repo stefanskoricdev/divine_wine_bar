@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiVine Wine Bar</title>
     <link rel="stylesheet" href="assets/style/main.css">
+    <!---Default styling-->
     <link rel="stylesheet" href="assets/style/desktop-small.css" media="(min-width: 1000px) and (max-width: 1250px)">
+    <!---Small desktop resolution styling-->
+    <link rel="stylesheet" href="assets/style/tablets.css" media="(min-width: 768px) and (max-width: 999px)">
+    <!---Tablets portrait and landscape-->
+    <link rel="stylesheet" href="assets/style/mobile.css" media="(max-width: 767px)">
+    <!---Mobile phones portrait and landscape-->
     <script src="https://kit.fontawesome.com/d025e4f1ed.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,7 +21,21 @@
         <div id="logo-header">
             <a href="index.html"><img src="assets/img/logo.svg" alt="divine_bar_logo" width="300px" height="150px"></a>
         </div>
-        <nav>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home-page-wrapper">Home</a></li>
+                <li><a href="#about-us-page-wrapper">About Us</a></li>
+                <li><a href="#gallery-wrapper">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <div class="burger-line" id="line1"></div>
+            <div class="burger-line" id="line2"></div>
+            <div class="burger-line" id="line3"></div>
+        </div>
+        <nav class="mobile-nav">
             <ul>
                 <li><a href="#home-page-wrapper">Home</a></li>
                 <li><a href="#about-us-page-wrapper">About Us</a></li>

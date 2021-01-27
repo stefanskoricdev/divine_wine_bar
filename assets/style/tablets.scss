@@ -1,0 +1,38 @@
+*{
+    font-size: 50%;
+}
+body{
+    header.active{
+        #logo-header{
+            width: 15rem;
+        }
+        .main-nav{
+            justify-content: flex-start;
+            a{
+                font-size: 3rem;
+            }
+        }
+    }
+    .main-wrapper{
+        #home-page-wrapper{
+            #hp-welcome-message{
+                width: 50%;
+                h1,h2{
+                    width: 95%;
+                    margin: 0 auto;
+                }
+            }
+            #hp-welcome-image{
+                width: 45%;
+            }
+        }
+        #about-us-page-wrapper{
+            .container{
+                .about-us-pic, .about-us-text{
+                    width: 48%;
+                    margin: 0 1%;
+                }
+            }
+        }
+    }
+}

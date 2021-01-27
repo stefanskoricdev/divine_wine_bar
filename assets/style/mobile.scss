@@ -1,0 +1,85 @@
+$mainColor: rgba(51, 51, 51, 1);
+$fontColor: rgba(171, 145, 120, 1);
+*{
+    font-size: 40%;
+}
+body{
+    header{
+        height: 15rem;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        #logo-header{
+            padding: .5rem 0;
+            width: 70%;
+            img{
+                width: 35rem;
+                height: 100%;
+                float: left;
+            }
+
+        }
+        .main-nav{
+            display: none;
+        }
+        .burger{
+            width: 10rem;
+            height: 10rem;
+            margin: 2.5rem auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            .burger-line{
+                width: 7rem;
+                height: 2px;
+                content: "";
+                margin: 1rem auto;
+                background-color: $fontColor;
+            }
+        }
+        .burger.active{
+            #line1{
+                transform: rotateZ(45deg);
+                position: absolute;
+            }
+            #line2{
+                display: none;
+            }
+            #line3{
+                transform: rotateZ(-45deg);
+                position: absolute;
+            }
+        }
+        .mobile-nav{
+            display: block;
+            position: absolute;
+            top: 15rem;
+            left: 0;
+            width: 100%;
+            background-color:rgba(171, 145, 120, .8);
+            ul{
+                width: 100%;
+                padding: 3rem 0;
+                li{
+                    display: block;
+                    width: 90%;
+                    margin: 2rem auto;
+                    a{
+                        font-size: 3rem;
+                        font-weight: 500;
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+    .main-wrapper{
+        padding-top: 15rem;
+        #home-page-wrapper{
+            padding: 5rem 0;
+        }
+    }
+}

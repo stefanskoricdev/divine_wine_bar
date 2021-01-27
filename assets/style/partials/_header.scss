@@ -6,9 +6,8 @@
             padding-top: 10rem;
             text-align: center;
         }
-        nav{
+        .main-nav{
             ul{
-                
                 display: flex;
                 justify-content: center;
                 margin: 2.5rem 0;
@@ -32,6 +31,12 @@
                     }
                 }
             }
+        }
+        .burger{
+            display: none;
+        }
+        .mobile-nav{
+            display: none;
         }
     }
     header.active{
@@ -64,7 +69,7 @@
             background-repeat: no-repeat;
             background-position: center;
         }
-        nav{
+        .main-nav{
             a{
                 color: $mainColor;
             }
