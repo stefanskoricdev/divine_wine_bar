@@ -141,6 +141,34 @@ body header {
 body .main-wrapper {
   padding-top: 15rem; }
   body .main-wrapper #home-page-wrapper {
-    padding: 5rem 0; }
+    padding: 2rem 0;
+    flex-direction: column-reverse; }
+    body .main-wrapper #home-page-wrapper #hp-welcome-image {
+      width: 98%;
+      opacity: 1; }
+    body .main-wrapper #home-page-wrapper #hp-welcome-message {
+      width: 100%; }
+  body .main-wrapper #about-us-page-wrapper .container {
+    flex-direction: column;
+    margin: 5rem auto; }
+    body .main-wrapper #about-us-page-wrapper .container .about-us-text {
+      margin: 0 2%;
+      width: 96%; }
+    body .main-wrapper #about-us-page-wrapper .container .about-us-pic {
+      width: 98%; }
+  body .main-wrapper #about-us-page-wrapper .container.active .about-us-text {
+    transition-delay: 0s; }
+  body .main-wrapper #about-us-page-wrapper .second-line-content {
+    flex-direction: column-reverse; }
+body footer {
+  height: 12rem; }
+  body footer .footer-info address {
+    text-align: center;
+    width: 40%; }
+  body footer .footer-info .footer-logo {
+    width: 30%; }
+  body footer .footer-info .footer-contact-info {
+    width: 40%;
+    text-align: center; }
 
 /*# sourceMappingURL=mobile.css.map */

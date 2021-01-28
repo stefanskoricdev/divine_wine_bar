@@ -8,7 +8,52 @@ body{
     .main-wrapper{
         padding-top: 15rem;
         #home-page-wrapper{
-            padding: 5rem 0;
+            padding: 2rem 0;
+            flex-direction: column-reverse;
+            #hp-welcome-image{
+                width: 98%;
+                opacity: 1;  
+            }
+            #hp-welcome-message{
+                width: 100%;
+            }
+        }
+        #about-us-page-wrapper{
+            .container{
+                flex-direction: column;
+                margin: 5rem auto;
+                .about-us-text{
+                    margin: 0 2%;
+                    width: 96%;
+                }
+                .about-us-pic{
+                    width: 98%;
+                }
+            }
+            .container.active{
+                .about-us-text{
+                    transition-delay: 0s;
+                }
+            }
+            .second-line-content{
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    footer{
+        height: 12rem;
+        .footer-info{
+            address{
+                text-align: center;
+                width: 40%;
+            }
+            .footer-logo{
+                width: 30%;
+            }
+            .footer-contact-info{
+                width: 40%;
+                text-align: center;
+            }
         }
     }
 }
