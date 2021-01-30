@@ -65,9 +65,11 @@
 }
 @keyframes header-animation {
     from{
-        height: 10rem;
+        height: 0rem;
+        opacity: 0;
     }to{
-        height: 40rem;
+        height: 30rem;
+        opacity: 1;
     }
 }
 @keyframes sticky-header-animation {

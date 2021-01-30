@@ -141,27 +141,33 @@ body header {
 body .main-wrapper {
   padding-top: 15rem; }
   body .main-wrapper #home-page-wrapper {
-    padding: 2rem 0;
     flex-direction: column-reverse; }
     body .main-wrapper #home-page-wrapper #hp-welcome-image {
       width: 98%;
-      opacity: 1; }
+      opacity: 1;
+      height: 100%; }
     body .main-wrapper #home-page-wrapper #hp-welcome-message {
-      width: 100%; }
-  body .main-wrapper #about-us-page-wrapper .container {
+      width: 100%;
+      height: auto; }
+      body .main-wrapper #home-page-wrapper #hp-welcome-message .hp-welcome-message-content {
+        width: 95%; }
+  body .main-wrapper #about-us-page-wrapper .about-us-page-content .container {
     flex-direction: column;
     margin: 5rem auto; }
-    body .main-wrapper #about-us-page-wrapper .container .about-us-text {
+    body .main-wrapper #about-us-page-wrapper .about-us-page-content .container .about-us-text {
       margin: 0 2%;
       width: 96%; }
-    body .main-wrapper #about-us-page-wrapper .container .about-us-pic {
+    body .main-wrapper #about-us-page-wrapper .about-us-page-content .container .about-us-pic {
       width: 98%; }
-  body .main-wrapper #about-us-page-wrapper .container.active .about-us-text {
+  body .main-wrapper #about-us-page-wrapper .about-us-page-content .container.active .about-us-text {
     transition-delay: 0s; }
-  body .main-wrapper #about-us-page-wrapper .second-line-content {
+  body .main-wrapper #about-us-page-wrapper .about-us-page-content .second-line-content {
     flex-direction: column-reverse; }
+  body .main-wrapper #gallery-wrapper .gallery-content h2 {
+    margin: 0 2rem; }
 body footer {
-  height: 12rem; }
+  height: 12rem;
+  border-top: 0.2rem solid #ab9178; }
   body footer .footer-info address {
     text-align: center;
     width: 40%; }

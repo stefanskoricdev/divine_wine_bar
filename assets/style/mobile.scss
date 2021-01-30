@@ -8,40 +8,54 @@ body{
     .main-wrapper{
         padding-top: 15rem;
         #home-page-wrapper{
-            padding: 2rem 0;
             flex-direction: column-reverse;
             #hp-welcome-image{
                 width: 98%;
-                opacity: 1;  
+                opacity: 1;
+                height: 100%;  
             }
             #hp-welcome-message{
                 width: 100%;
+                height: auto;
+                .hp-welcome-message-content{
+                    width: 95%;
+                }
             }
         }
         #about-us-page-wrapper{
-            .container{
-                flex-direction: column;
-                margin: 5rem auto;
-                .about-us-text{
-                    margin: 0 2%;
-                    width: 96%;
+            .about-us-page-content{
+                .container{
+                    flex-direction: column;
+                    margin: 5rem auto;
+                    .about-us-text{
+                        margin: 0 2%;
+                        width: 96%;
+                    }
+                    .about-us-pic{
+                        width: 98%;
+                    }
                 }
-                .about-us-pic{
-                    width: 98%;
+                .container.active{
+                    .about-us-text{
+                        transition-delay: 0s;
+                    }
+                }
+                .second-line-content{
+                    flex-direction: column-reverse;
                 }
             }
-            .container.active{
-                .about-us-text{
-                    transition-delay: 0s;
+        }
+        #gallery-wrapper{
+            .gallery-content{
+                h2{
+                    margin: 0 2rem;
                 }
-            }
-            .second-line-content{
-                flex-direction: column-reverse;
             }
         }
     }
     footer{
         height: 12rem;
+        border-top: .2rem solid $fontColor;
         .footer-info{
             address{
                 text-align: center;

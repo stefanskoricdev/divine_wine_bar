@@ -24,6 +24,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: $mainColor;
     @import "partials/header";
     /*-------------HEADER END------------------------*/
     .main-wrapper{
@@ -44,51 +45,64 @@ body{
         }
         #home-page-wrapper{
             position: relative;
-            display: flex;
-            background-color: $mainColor;
-            padding: 15rem 0;
             #hp-welcome-message{
-                width: 50%;
+                width: 100%;
+                height: 91rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                opacity: 0;
-                h1, h2{
+                opacity: 1;
+                background: -moz-linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 33%, rgba(51,51,51,0.8) 67%, rgba(51,51,51,1) 97%);
+                background: -webkit-linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 33%, rgba(51,51,51,0.8) 67%, rgba(51,51,51,1) 97%);
+                background: linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 33%, rgba(51,51,51,0.8) 67%, rgba(51,51,51,1) 97%);
+                position: relative;
+                z-index: 1;
+                h1{
+                    opacity: 0;
+                }
+                p{
                     font-weight: 400;
                     font-family: $handWritten;
                     line-height: 2;
                     letter-spacing: .5rem;
                     text-align: center;
-                }
-                h1{
-                    font-size: 4rem;
                     width: 80%;
+                    margin: 0 auto;
+                    opacity: 0;
+                }
+                .hp-welcome-message-content{
+                    font-size: 4rem;
+                    width: 60%;
                     max-width: 100%;
                 }
-                h2{
+                .hp-welcome-message-signature{
                     font-size: 2rem;
                 }
             }
             #hp-welcome-image{
-                background-image: url("../img/home_page_pic.jpg");
-                background-size: cover;
-                background-position: center;
-                width: 40%;
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
                 height: 90rem;
-                margin: 1rem auto;
-                border: 2px solid $fontColor;
                 opacity: 0;
+                background-image: url("../img/home_page_pic.png");
+                background-size: cover;
+                background-position: center; 
             }
         }
         #home-page-wrapper.active{
             #hp-welcome-message{
-                opacity: 1;
-                -webkit-transition: opacity 1s linear;
-                -moz-transition: opacity 1s linear;
-                -ms-transition: opacity 1s linear;
-                -o-transition: opacity 1s linear;
-                transition: opacity 1s linear;
+                p, h1{
+                    opacity: 1;
+                    -webkit-transition: opacity 1s linear 300ms;
+                    -moz-transition: opacity 1s linear 300ms;
+                    -ms-transition: opacity 1s linear 300ms;
+                    -o-transition: opacity 1s linear 300ms;
+                    transition: opacity 1s linear 300ms;
+                }
             }
             #hp-welcome-image{
                 opacity: 1;
@@ -103,71 +117,80 @@ body{
             content: "";
             width: 50%;
             position: absolute;
-            bottom: 0;
+            bottom: -5rem;
             left: 25%;
             height: 2px;
+            background: none;
             background-color: $fontColor;
+            z-index: 1;
         }
         /*--------HOME PAGE END----------*/
         #about-us-page-wrapper{
             position: relative;
-            padding: 15rem 0;
-            background-color: $mainColor;
-            .container{
-                width: 80%;
-                margin: 2rem auto;
-                display: flex;
-                .about-us-text{
-                    width: 50%;
+            background-image: url("../img/about_us_background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            .about-us-page-content{
+                padding: 15rem 0;
+                background: -moz-linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 33%, rgba(51,51,51,0.8) 67%, rgba(51,51,51,1) 97%);
+                background: -webkit-linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 33%, rgba(51,51,51,0.8) 67%, rgba(51,51,51,1) 97%);
+                background: linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 33%, rgba(51,51,51,0.8) 67%, rgba(51,51,51,1) 97%);
+                .container{
+                    width: 80%;
+                    margin: 2rem auto;
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    opacity: 0;
-                    p{
-                        font-size: 2.5rem;
-                        width: 55rem;
-                        line-height: 1.5;
-                        letter-spacing: .4rem;
-                        text-align: center;
+                    .about-us-text{
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        opacity: 0;
+                        p{
+                            font-size: 2.5rem;
+                            width: 55rem;
+                            line-height: 1.5;
+                            letter-spacing: .4rem;
+                            text-align: center;
+                        }
+                    }
+                    .about-us-pic{
+                        width: 50rem;
+                        height: 60rem;
+                        margin: 0 auto;
+                        border: 1px solid $fontColor;
+                        background-size: cover;
+                        background-repeat: no-repeat; 
+                        background-position: center;
+                        opacity: 0;
+                    }
+                    #about-us-first-pic{
+                        background-image: url(../img/about_us_wine.jpg);
+                    }
+                    #about-us-second-pic{
+                        background-image: url(../img/about_us_food.jpg);
+                    }
+                    #about-us-third-pic{
+                        background-image: url(../img/about_us_coffe.jpg);
                     }
                 }
-                .about-us-pic{
-                    width: 60rem;
-                    height: 90rem;
-                    margin: 0 auto;
-                    border: 1px solid $fontColor;
-                    background-size: cover;
-                    background-repeat: no-repeat; 
-                    background-position: center;
-                    opacity: 0;
-                }
-                #about-us-first-pic{
-                    background-image: url(../img/about_us_wine.jpg);
-                }
-                #about-us-second-pic{
-                    background-image: url(../img/about_us_food.jpg);
-                    height: 40rem;
-                }
-                #about-us-third-pic{
-                    background-image: url(../img/about_us_coffe.jpg);
-                }
-            }
-            .container.active{
-                .about-us-pic{
-                    opacity: 1;
-                    -webkit-transition: opacity 800ms linear;
-                    -moz-transition: opacity 800ms linear;
-                    -ms-transition: opacity 800ms linear;
-                    -o-transition: opacity 800ms linear;
-                    transition: opacity 800ms linear;
-                }
-                .about-us-text{
-                    opacity: 1;
-                    -webkit-transition: opacity 800ms linear 300ms;
-                    -moz-transition: opacity 800ms linear 300ms;
-                    -ms-transition: opacity 800ms linear 300ms;
-                    -o-transition: opacity 800ms linear 300ms;
-                    transition: opacity 800ms linear 300ms;
+                .container.active{
+                    .about-us-pic{
+                        opacity: 1;
+                        -webkit-transition: opacity 800ms linear;
+                        -moz-transition: opacity 800ms linear;
+                        -ms-transition: opacity 800ms linear;
+                        -o-transition: opacity 800ms linear;
+                        transition: opacity 800ms linear;
+                    }
+                    .about-us-text{
+                        opacity: 1;
+                        -webkit-transition: opacity 800ms linear 300ms;
+                        -moz-transition: opacity 800ms linear 300ms;
+                        -ms-transition: opacity 800ms linear 300ms;
+                        -o-transition: opacity 800ms linear 300ms;
+                        transition: opacity 800ms linear 300ms;
+                    }
                 }
             }
         }
@@ -183,15 +206,24 @@ body{
         /*--------ABOUT US PAGE END----------*/
         #gallery-wrapper{
             width: 100%;
-            height: 90rem;
             background-color: $mainColor;
-            padding: 15rem 0;
             overflow: hidden;
-            h2{
-                text-align: center;
-                font-weight: 400;
+            background-image: url("../img/gallery_background.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            .gallery-content{
+                padding: 5rem 0;
+                height: 90rem;
+                background: -moz-linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 23%, rgba(51,51,51,0.8) 77%, rgba(51,51,51,1) 97%);
+                background: -webkit-linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 23%, rgba(51,51,51,0.8) 77%, rgba(51,51,51,1) 97%);
+                background: linear-gradient(180deg, rgba(51,51,51,1) 3%, rgba(51,51,51,0.8) 23%, rgba(51,51,51,0.8) 77%, rgba(51,51,51,1) 97%);
+                h2{
+                    text-align: center;
+                    font-weight: 400;
+                }
+                @import 'partials/carousel';
             }
-            @import 'partials/carousel';
         }
     }
     /*-------MAIN SECTION END--------*/

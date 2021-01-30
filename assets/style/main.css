@@ -17,14 +17,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #333333;
   /*-------------HEADER END------------------------*/
   /*-------MAIN SECTION END--------*/ }
   body header {
-    height: 40rem;
+    height: 30rem;
     background-color: #333333;
     opacity: 1; }
     body header #logo-header {
-      padding-top: 10rem;
+      padding-top: 2rem;
       text-align: center; }
     body header .main-nav ul {
       display: flex;
@@ -99,45 +100,55 @@ body {
       background-color: #ab9178;
       margin: .5rem auto; }
     body .main-wrapper #home-page-wrapper {
-      position: relative;
-      display: flex;
-      background-color: #333333;
-      padding: 15rem 0; }
+      position: relative; }
       body .main-wrapper #home-page-wrapper #hp-welcome-message {
-        width: 50%;
+        width: 100%;
+        height: 91rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        opacity: 0; }
-        body .main-wrapper #home-page-wrapper #hp-welcome-message h1, body .main-wrapper #home-page-wrapper #hp-welcome-message h2 {
+        opacity: 1;
+        background: -moz-linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 33%, rgba(51, 51, 51, 0.8) 67%, #333333 97%);
+        background: -webkit-linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 33%, rgba(51, 51, 51, 0.8) 67%, #333333 97%);
+        background: linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 33%, rgba(51, 51, 51, 0.8) 67%, #333333 97%);
+        position: relative;
+        z-index: 1; }
+        body .main-wrapper #home-page-wrapper #hp-welcome-message h1 {
+          opacity: 0; }
+        body .main-wrapper #home-page-wrapper #hp-welcome-message p {
           font-weight: 400;
           font-family: "Dancing Script", cursive;
           line-height: 2;
           letter-spacing: .5rem;
-          text-align: center; }
-        body .main-wrapper #home-page-wrapper #hp-welcome-message h1 {
-          font-size: 4rem;
+          text-align: center;
           width: 80%;
+          margin: 0 auto;
+          opacity: 0; }
+        body .main-wrapper #home-page-wrapper #hp-welcome-message .hp-welcome-message-content {
+          font-size: 4rem;
+          width: 60%;
           max-width: 100%; }
-        body .main-wrapper #home-page-wrapper #hp-welcome-message h2 {
+        body .main-wrapper #home-page-wrapper #hp-welcome-message .hp-welcome-message-signature {
           font-size: 2rem; }
       body .main-wrapper #home-page-wrapper #hp-welcome-image {
-        background-image: url("../img/home_page_pic.jpg");
-        background-size: cover;
-        background-position: center;
-        width: 40%;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 90rem;
-        margin: 1rem auto;
-        border: 2px solid #ab9178;
-        opacity: 0; }
-    body .main-wrapper #home-page-wrapper.active #hp-welcome-message {
+        opacity: 0;
+        background-image: url("../img/home_page_pic.png");
+        background-size: cover;
+        background-position: center; }
+    body .main-wrapper #home-page-wrapper.active #hp-welcome-message p, body .main-wrapper #home-page-wrapper.active #hp-welcome-message h1 {
       opacity: 1;
-      -webkit-transition: opacity 1s linear;
-      -moz-transition: opacity 1s linear;
-      -ms-transition: opacity 1s linear;
-      -o-transition: opacity 1s linear;
-      transition: opacity 1s linear; }
+      -webkit-transition: opacity 1s linear 300ms;
+      -moz-transition: opacity 1s linear 300ms;
+      -ms-transition: opacity 1s linear 300ms;
+      -o-transition: opacity 1s linear 300ms;
+      transition: opacity 1s linear 300ms; }
     body .main-wrapper #home-page-wrapper.active #hp-welcome-image {
       opacity: 1;
       -webkit-transition: opacity 1s linear;
@@ -149,60 +160,68 @@ body {
       content: "";
       width: 50%;
       position: absolute;
-      bottom: 0;
+      bottom: -5rem;
       left: 25%;
       height: 2px;
-      background-color: #ab9178; }
+      background: none;
+      background-color: #ab9178;
+      z-index: 1; }
     body .main-wrapper #about-us-page-wrapper {
       position: relative;
-      padding: 15rem 0;
-      background-color: #333333; }
-      body .main-wrapper #about-us-page-wrapper .container {
-        width: 80%;
-        margin: 2rem auto;
-        display: flex; }
-        body .main-wrapper #about-us-page-wrapper .container .about-us-text {
-          width: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          opacity: 0; }
-          body .main-wrapper #about-us-page-wrapper .container .about-us-text p {
-            font-size: 2.5rem;
-            width: 55rem;
-            line-height: 1.5;
-            letter-spacing: .4rem;
-            text-align: center; }
-        body .main-wrapper #about-us-page-wrapper .container .about-us-pic {
-          width: 60rem;
-          height: 90rem;
-          margin: 0 auto;
-          border: 1px solid #ab9178;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          opacity: 0; }
-        body .main-wrapper #about-us-page-wrapper .container #about-us-first-pic {
-          background-image: url(../img/about_us_wine.jpg); }
-        body .main-wrapper #about-us-page-wrapper .container #about-us-second-pic {
-          background-image: url(../img/about_us_food.jpg);
-          height: 40rem; }
-        body .main-wrapper #about-us-page-wrapper .container #about-us-third-pic {
-          background-image: url(../img/about_us_coffe.jpg); }
-      body .main-wrapper #about-us-page-wrapper .container.active .about-us-pic {
-        opacity: 1;
-        -webkit-transition: opacity 800ms linear;
-        -moz-transition: opacity 800ms linear;
-        -ms-transition: opacity 800ms linear;
-        -o-transition: opacity 800ms linear;
-        transition: opacity 800ms linear; }
-      body .main-wrapper #about-us-page-wrapper .container.active .about-us-text {
-        opacity: 1;
-        -webkit-transition: opacity 800ms linear 300ms;
-        -moz-transition: opacity 800ms linear 300ms;
-        -ms-transition: opacity 800ms linear 300ms;
-        -o-transition: opacity 800ms linear 300ms;
-        transition: opacity 800ms linear 300ms; }
+      background-image: url("../img/about_us_background.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+      body .main-wrapper #about-us-page-wrapper .about-us-page-content {
+        padding: 15rem 0;
+        background: -moz-linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 33%, rgba(51, 51, 51, 0.8) 67%, #333333 97%);
+        background: -webkit-linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 33%, rgba(51, 51, 51, 0.8) 67%, #333333 97%);
+        background: linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 33%, rgba(51, 51, 51, 0.8) 67%, #333333 97%); }
+        body .main-wrapper #about-us-page-wrapper .about-us-page-content .container {
+          width: 80%;
+          margin: 2rem auto;
+          display: flex; }
+          body .main-wrapper #about-us-page-wrapper .about-us-page-content .container .about-us-text {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; }
+            body .main-wrapper #about-us-page-wrapper .about-us-page-content .container .about-us-text p {
+              font-size: 2.5rem;
+              width: 55rem;
+              line-height: 1.5;
+              letter-spacing: .4rem;
+              text-align: center; }
+          body .main-wrapper #about-us-page-wrapper .about-us-page-content .container .about-us-pic {
+            width: 50rem;
+            height: 60rem;
+            margin: 0 auto;
+            border: 1px solid #ab9178;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0; }
+          body .main-wrapper #about-us-page-wrapper .about-us-page-content .container #about-us-first-pic {
+            background-image: url(../img/about_us_wine.jpg); }
+          body .main-wrapper #about-us-page-wrapper .about-us-page-content .container #about-us-second-pic {
+            background-image: url(../img/about_us_food.jpg); }
+          body .main-wrapper #about-us-page-wrapper .about-us-page-content .container #about-us-third-pic {
+            background-image: url(../img/about_us_coffe.jpg); }
+        body .main-wrapper #about-us-page-wrapper .about-us-page-content .container.active .about-us-pic {
+          opacity: 1;
+          -webkit-transition: opacity 800ms linear;
+          -moz-transition: opacity 800ms linear;
+          -ms-transition: opacity 800ms linear;
+          -o-transition: opacity 800ms linear;
+          transition: opacity 800ms linear; }
+        body .main-wrapper #about-us-page-wrapper .about-us-page-content .container.active .about-us-text {
+          opacity: 1;
+          -webkit-transition: opacity 800ms linear 300ms;
+          -moz-transition: opacity 800ms linear 300ms;
+          -ms-transition: opacity 800ms linear 300ms;
+          -o-transition: opacity 800ms linear 300ms;
+          transition: opacity 800ms linear 300ms; }
     body .main-wrapper #about-us-page-wrapper::after {
       content: "";
       width: 50%;
@@ -213,105 +232,113 @@ body {
       background-color: #ab9178; }
     body .main-wrapper #gallery-wrapper {
       width: 100%;
-      height: 90rem;
       background-color: #333333;
-      padding: 15rem 0;
-      overflow: hidden; }
-      body .main-wrapper #gallery-wrapper h2 {
-        text-align: center;
-        font-weight: 400; }
-      body .main-wrapper #gallery-wrapper #carousel-wrapper {
-        width: 60rem;
-        max-width: 100%;
-        margin: 25rem auto;
-        height: 42rem;
-        position: relative;
-        perspective: 150rem; }
-        body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container {
-          -webkit-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
-          -moz-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
-          -ms-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
-          -o-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
-          transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
-          transform-style: preserve-3d;
-          -webkit-animation: carousel-animation 24s ease-in-out infinite 1s;
-          -moz-animation: carousel-animation 24s ease-in-out infinite 1s;
-          -ms-animation: carousel-animation 24s ease-in-out infinite 1s;
-          -o-animation: carousel-animation 24s ease-in-out infinite 1s;
-          animation: carousel-animation 24s ease-in-out infinite 1s; }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container .carousel-image {
-            width: 60rem;
-            max-width: 100%;
-            height: 42rem;
-            border-radius: 10px;
-            position: absolute;
-            opacity: 1;
-            background-size: cover;
-            background-repeat: no-repeat;
-            -webkit-transition: transform 200ms linear;
-            -moz-transition: transform 200ms linear;
-            -ms-transition: transform 200ms linear;
-            -o-transition: transform 200ms linear;
-            transition: transform 200ms linear;
-            opacity: .95; }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image1 {
-            background-image: url(../img/Carousel/img1.jpg);
-            -webkit-transform: rotateY(0deg) translateZ(90rem);
-            -moz-transform: rotateY(0deg) translateZ(90rem);
-            -ms-transform: rotateY(0deg) translateZ(90rem);
-            -o-transform: rotateY(0deg) translateZ(90rem);
-            transform: rotateY(0deg) translateZ(90rem); }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image2 {
-            background-image: url(../img/Carousel/img2.jpg);
-            -webkit-transform: rotateY(45deg) translateZ(90rem);
-            -moz-transform: rotateY(45deg) translateZ(90rem);
-            -ms-transform: rotateY(45deg) translateZ(90rem);
-            -o-transform: rotateY(45deg) translateZ(90rem);
-            transform: rotateY(45deg) translateZ(90rem); }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image3 {
-            background-image: url(../img/Carousel/img3.jpg);
-            -webkit-transform: rotateY(90deg) translateZ(90rem);
-            -moz-transform: rotateY(90deg) translateZ(90rem);
-            -ms-transform: rotateY(90deg) translateZ(90rem);
-            -o-transform: rotateY(90deg) translateZ(90rem);
-            transform: rotateY(90deg) translateZ(90rem); }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image4 {
-            background-image: url(../img/Carousel/img4.jpg);
-            -webkit-transform: rotateY(135deg) translateZ(90rem);
-            -moz-transform: rotateY(135deg) translateZ(90rem);
-            -ms-transform: rotateY(135deg) translateZ(90rem);
-            -o-transform: rotateY(135deg) translateZ(90rem);
-            transform: rotateY(135deg) translateZ(90rem); }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image5 {
-            background-image: url(../img/Carousel/img5.jpg);
-            -webkit-transform: rotateY(180deg) translateZ(90rem);
-            -moz-transform: rotateY(180deg) translateZ(90rem);
-            -ms-transform: rotateY(180deg) translateZ(90rem);
-            -o-transform: rotateY(180deg) translateZ(90rem);
-            transform: rotateY(180deg) translateZ(90rem); }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image6 {
-            background-image: url(../img/Carousel/img6.jpg);
-            -webkit-transform: rotateY(225deg) translateZ(90rem);
-            -moz-transform: rotateY(225deg) translateZ(90rem);
-            -ms-transform: rotateY(225deg) translateZ(90rem);
-            -o-transform: rotateY(225deg) translateZ(90rem);
-            transform: rotateY(225deg) translateZ(90rem); }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image7 {
-            background-image: url(../img/Carousel/img7.jpg);
-            -webkit-transform: rotateY(270deg) translateZ(90rem);
-            -moz-transform: rotateY(270deg) translateZ(90rem);
-            -ms-transform: rotateY(270deg) translateZ(90rem);
-            -o-transform: rotateY(270deg) translateZ(90rem);
-            transform: rotateY(270deg) translateZ(90rem); }
-          body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container #image8 {
-            background-image: url(../img/Carousel/img8.jpg);
-            -webkit-transform: rotateY(315deg) translateZ(90rem);
-            -moz-transform: rotateY(315deg) translateZ(90rem);
-            -ms-transform: rotateY(315deg) translateZ(90rem);
-            -o-transform: rotateY(315deg) translateZ(90rem);
-            transform: rotateY(315deg) translateZ(90rem); }
-        body .main-wrapper #gallery-wrapper #carousel-wrapper #carousel-container:hover {
-          animation-play-state: paused; }
+      overflow: hidden;
+      background-image: url("../img/gallery_background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+      body .main-wrapper #gallery-wrapper .gallery-content {
+        padding: 5rem 0;
+        height: 90rem;
+        background: -moz-linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 23%, rgba(51, 51, 51, 0.8) 77%, #333333 97%);
+        background: -webkit-linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 23%, rgba(51, 51, 51, 0.8) 77%, #333333 97%);
+        background: linear-gradient(180deg, #333333 3%, rgba(51, 51, 51, 0.8) 23%, rgba(51, 51, 51, 0.8) 77%, #333333 97%); }
+        body .main-wrapper #gallery-wrapper .gallery-content h2 {
+          text-align: center;
+          font-weight: 400; }
+        body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper {
+          width: 60rem;
+          max-width: 100%;
+          margin: 20rem auto;
+          height: 42rem;
+          position: relative;
+          perspective: 150rem; }
+          body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container {
+            -webkit-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
+            -moz-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
+            -ms-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
+            -o-transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
+            transform: translateZ(-90rem) rotate3d(0, 1, 0, 0deg);
+            transform-style: preserve-3d;
+            -webkit-animation: carousel-animation 24s ease-in-out infinite 1s;
+            -moz-animation: carousel-animation 24s ease-in-out infinite 1s;
+            -ms-animation: carousel-animation 24s ease-in-out infinite 1s;
+            -o-animation: carousel-animation 24s ease-in-out infinite 1s;
+            animation: carousel-animation 24s ease-in-out infinite 1s; }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container .carousel-image {
+              width: 60rem;
+              max-width: 100%;
+              height: 42rem;
+              border-radius: 10px;
+              position: absolute;
+              opacity: 1;
+              background-size: cover;
+              background-repeat: no-repeat;
+              -webkit-transition: transform 200ms linear;
+              -moz-transition: transform 200ms linear;
+              -ms-transition: transform 200ms linear;
+              -o-transition: transform 200ms linear;
+              transition: transform 200ms linear;
+              opacity: .95; }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image1 {
+              background-image: url(../img/Carousel/img1.jpg);
+              -webkit-transform: rotateY(0deg) translateZ(90rem);
+              -moz-transform: rotateY(0deg) translateZ(90rem);
+              -ms-transform: rotateY(0deg) translateZ(90rem);
+              -o-transform: rotateY(0deg) translateZ(90rem);
+              transform: rotateY(0deg) translateZ(90rem); }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image2 {
+              background-image: url(../img/Carousel/img2.jpg);
+              -webkit-transform: rotateY(45deg) translateZ(90rem);
+              -moz-transform: rotateY(45deg) translateZ(90rem);
+              -ms-transform: rotateY(45deg) translateZ(90rem);
+              -o-transform: rotateY(45deg) translateZ(90rem);
+              transform: rotateY(45deg) translateZ(90rem); }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image3 {
+              background-image: url(../img/Carousel/img3.jpg);
+              -webkit-transform: rotateY(90deg) translateZ(90rem);
+              -moz-transform: rotateY(90deg) translateZ(90rem);
+              -ms-transform: rotateY(90deg) translateZ(90rem);
+              -o-transform: rotateY(90deg) translateZ(90rem);
+              transform: rotateY(90deg) translateZ(90rem); }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image4 {
+              background-image: url(../img/Carousel/img4.jpg);
+              -webkit-transform: rotateY(135deg) translateZ(90rem);
+              -moz-transform: rotateY(135deg) translateZ(90rem);
+              -ms-transform: rotateY(135deg) translateZ(90rem);
+              -o-transform: rotateY(135deg) translateZ(90rem);
+              transform: rotateY(135deg) translateZ(90rem); }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image5 {
+              background-image: url(../img/Carousel/img5.jpg);
+              -webkit-transform: rotateY(180deg) translateZ(90rem);
+              -moz-transform: rotateY(180deg) translateZ(90rem);
+              -ms-transform: rotateY(180deg) translateZ(90rem);
+              -o-transform: rotateY(180deg) translateZ(90rem);
+              transform: rotateY(180deg) translateZ(90rem); }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image6 {
+              background-image: url(../img/Carousel/img6.jpg);
+              -webkit-transform: rotateY(225deg) translateZ(90rem);
+              -moz-transform: rotateY(225deg) translateZ(90rem);
+              -ms-transform: rotateY(225deg) translateZ(90rem);
+              -o-transform: rotateY(225deg) translateZ(90rem);
+              transform: rotateY(225deg) translateZ(90rem); }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image7 {
+              background-image: url(../img/Carousel/img7.jpg);
+              -webkit-transform: rotateY(270deg) translateZ(90rem);
+              -moz-transform: rotateY(270deg) translateZ(90rem);
+              -ms-transform: rotateY(270deg) translateZ(90rem);
+              -o-transform: rotateY(270deg) translateZ(90rem);
+              transform: rotateY(270deg) translateZ(90rem); }
+            body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image8 {
+              background-image: url(../img/Carousel/img8.jpg);
+              -webkit-transform: rotateY(315deg) translateZ(90rem);
+              -moz-transform: rotateY(315deg) translateZ(90rem);
+              -ms-transform: rotateY(315deg) translateZ(90rem);
+              -o-transform: rotateY(315deg) translateZ(90rem);
+              transform: rotateY(315deg) translateZ(90rem); }
+          body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container:hover {
+            animation-play-state: paused; }
   body footer {
     height: 20rem;
     width: 100%;
@@ -406,9 +433,11 @@ body {
     transform: translateZ(-90rem) rotate3d(0, 1, 0, 360deg); } }
 @keyframes header-animation {
   from {
-    height: 10rem; }
+    height: 0rem;
+    opacity: 0; }
   to {
-    height: 40rem; } }
+    height: 30rem;
+    opacity: 1; } }
 @keyframes sticky-header-animation {
   0% {
     height: 0;
