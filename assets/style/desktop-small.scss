@@ -1,13 +1,16 @@
 body{
     .main-wrapper{
         #about-us-page-wrapper{
-            .container{
-                .about-us-text{
-                    padding: 15px;
-                }
-                .about-us-pic{
-                    width: 45rem;
-                    height: 70rem;
+            .about-us-page-content{
+                .container{
+                    width: 95%;
+                    .about-us-text{
+                        padding: 15px;
+                    }
+                    .about-us-pic{
+                        width: 45rem;
+                        height: 70rem;
+                    }
                 }
             }
         }
