@@ -1,0 +1,17 @@
+footer{
+        height: 12rem;
+        border-top: .2rem solid $fontColor;
+        .footer-info{
+            address{
+                text-align: center;
+                width: 40%;
+            }
+            .footer-logo{
+                width: 30%;
+            }
+            .footer-contact-info{
+                width: 40%;
+                text-align: center;
+            }
+        }
+    }

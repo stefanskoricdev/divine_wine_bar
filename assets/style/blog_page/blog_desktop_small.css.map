@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,kBAAa;EACT,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,OAAO;EAChB,6BAAU;IACN,KAAK,EAAE,GAAG;IACV,sCAAQ;MACJ,KAAK,EAAE,GAAG",
+"sources": ["blog_desktop_small.scss"],
+"names": [],
+"file": "blog_desktop_small.css"
+}

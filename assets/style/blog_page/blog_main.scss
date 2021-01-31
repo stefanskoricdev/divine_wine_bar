@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+$mainFont: 'Raleway', sans-serif;
+$handWritten: 'Dancing Script', cursive;
+$mainColor: rgba(51, 51, 51, 1);
+$fontColor: rgba(171, 145, 120, 1);
+*{
+    font-size: 62.5%;
+    color: $fontColor;
+    a{
+        font-family: $mainFont;
+        text-decoration: none;
+        color: $fontColor;
+        font-size: 1.6rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $mainColor;
+    @import "../partials/header";
+    /*-------------HEADER END------------------------*/
+    .main-wrapper{
+        padding: 10rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 2rem;
+        grid-template-areas: 
+        "page-title page-title"
+        "blog1 blog2"
+        "blog3 blog2";
+        .page-title{
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            font-family: $handWritten;
+            grid-area: page-title;
+        }
+        .page-title::after{
+            content: "";
+            width: 8rem;
+            height: .2rem;
+            background-color: $fontColor;
+            margin: .5rem auto;
+        }
+        .container{
+            width: 80%;
+            height: 60rem;
+            padding: 1rem;
+            border: 1px solid $fontColor;
+            .picture{
+                background-size: cover;
+                background-position: center;
+                height: 50%;
+                width: 60%;
+                margin: 0 auto;
+            }
+            .text{
+                height: 50%;
+                color: $fontColor;
+                p{
+                    font-size: 2rem;
+                    a{
+                        font-weight: 500;
+                    }
+                    a:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        
+        #blog1{
+            grid-area: blog1;
+            .picture{
+                background-image: url("../../img/about_us_wine.jpg");
+            }
+        }
+        #blog2{
+            height: calc(100% - 2rem);
+            grid-area: blog2;
+            .picture{
+                height: 70%;
+                width: 80%;
+                background-image: url("../../img/home_page_pic.jpg");
+            }
+            .text{
+                height: 30%;
+            }
+        }
+        #blog3{
+            grid-area: blog3;
+            .picture{
+                background-image: url("../../img/Carousel/img2.jpg");
+            }
+        }
+        
+    }
+    @import "../partials/footer";
+}
+@import "../partials/keyframes";

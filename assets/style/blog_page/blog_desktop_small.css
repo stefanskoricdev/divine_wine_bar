@@ -1,0 +1,9 @@
+body .main-wrapper {
+  width: 98%;
+  padding: 5rem 1%; }
+  body .main-wrapper .container {
+    width: 90%; }
+    body .main-wrapper .container .picture {
+      width: 95%; }
+
+/*# sourceMappingURL=blog_desktop_small.css.map */

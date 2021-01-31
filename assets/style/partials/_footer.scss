@@ -1,0 +1,43 @@
+footer{
+    height: 20rem;
+    width: 100%;
+    background-color: $mainColor;
+    padding: 5rem 0;
+    .footer-info{
+        width: 100%;
+        margin: 0 auto;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        address{
+            font-style: normal;
+            margin: 0;
+            width: 33%;
+            text-align: right;
+        }
+        .footer-logo{
+            background-image: url(../../img/logo.svg);
+            width: 34%;
+            height: 7rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+        }
+        .footer-contact-info{
+            font-size: 3rem;
+            margin: 0;
+            width: 33%;
+        }
+    }
+    #footer-social-network{
+        width: 50%;
+        margin: 2rem auto;
+        text-align: center;
+        a{
+            margin: 0 2rem;
+            font-size: 3rem;
+        }
+    }
+}

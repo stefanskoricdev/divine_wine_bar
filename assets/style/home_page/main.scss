@@ -25,7 +25,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color: $mainColor;
-    @import "partials/header";
+    @import "../partials/header";
     /*-------------HEADER END------------------------*/
     .main-wrapper{
         .page-title{
@@ -88,7 +88,7 @@ body{
                 width: 100%;
                 height: 90rem;
                 opacity: 0;
-                background-image: url("../img/home_page_pic.jpg");
+                background-image: url("../../img/home_page_pic.jpg");
                 background-size: cover;
                 background-position: center; 
             }
@@ -127,7 +127,7 @@ body{
         /*--------HOME PAGE END----------*/
         #about-us-page-wrapper{
             position: relative;
-            background-image: url("../img/about_us_background.jpg");
+            background-image: url("../../img/about_us_background.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -165,13 +165,13 @@ body{
                         opacity: 0;
                     }
                     #about-us-first-pic{
-                        background-image: url(../img/about_us_wine.jpg);
+                        background-image: url(../../img/about_us_wine.jpg);
                     }
                     #about-us-second-pic{
-                        background-image: url(../img/about_us_food.jpg);
+                        background-image: url(../../img/about_us_food.jpg);
                     }
                     #about-us-third-pic{
-                        background-image: url(../img/about_us_coffe.jpg);
+                        background-image: url(../../img/about_us_coffe.jpg);
                     }
                 }
                 .container.active{
@@ -208,7 +208,7 @@ body{
             width: 100%;
             background-color: $mainColor;
             overflow: hidden;
-            background-image: url("../img/gallery_background.png");
+            background-image: url("../../img/gallery_background.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -222,56 +222,14 @@ body{
                     text-align: center;
                     font-weight: 400;
                 }
-                @import 'partials/carousel';
+                @import '../partials/carousel';
             }
         }
     }
     /*-------MAIN SECTION END--------*/
-    footer{
-        height: 20rem;
-        width: 100%;
-        background-color: $mainColor;
-        padding: 5rem 0;
-        .footer-info{
-            width: 100%;
-            margin: 0 auto;
-            font-size: 3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            address{
-                font-style: normal;
-                margin: 0;
-                width: 33%;
-                text-align: right;
-            }
-            .footer-logo{
-                background-image: url(../img/logo.svg);
-                width: 34%;
-                height: 7rem;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                margin: 0;
-            }
-            .footer-contact-info{
-                font-size: 3rem;
-                margin: 0;
-                width: 33%;
-            }
-        }
-        #footer-social-network{
-            width: 50%;
-            margin: 2rem auto;
-            text-align: center;
-            a{
-                margin: 0 2rem;
-                font-size: 3rem;
-            }
-        }
-    }
+    @import "../partials/footer";
 }
-@import "partials/keyframes";
+@import "../partials/keyframes";
 @media only screen and (min-width: 300px) and (max-width: 1600px){
     body{
         .main-wrapper{

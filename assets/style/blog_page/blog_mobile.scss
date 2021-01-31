@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+$mainFont: 'Raleway', sans-serif;
+$handWritten: 'Dancing Script', cursive;
+$mainColor: rgba(51, 51, 51, 1);
+$fontColor: rgba(171, 145, 120, 1);
+
+*{
+    font-size: 40%;
+}
+body{
+    @import "../partials/header_mobile";
+    .main-wrapper{
+        width: 98%;
+        padding: 15rem 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .container, #blog2{
+            height: auto;
+            .picture{
+                height: 40rem;
+                width: 100%;
+            }
+            .text{
+                height: auto;
+                h2{
+                    font-size: 4rem;
+                }
+                p, a{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    @import "../partials/footer_mobile";
+}

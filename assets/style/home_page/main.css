@@ -68,7 +68,7 @@ body {
       width: 25rem;
       height: 100%;
       padding: 0;
-      background-image: url(../img/logo_dark.svg);
+      background-image: url(../../img/logo_dark.svg);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center; }
@@ -139,7 +139,7 @@ body {
         width: 100%;
         height: 90rem;
         opacity: 0;
-        background-image: url("../img/home_page_pic.jpg");
+        background-image: url("../../img/home_page_pic.jpg");
         background-size: cover;
         background-position: center; }
     body .main-wrapper #home-page-wrapper.active #hp-welcome-message p, body .main-wrapper #home-page-wrapper.active #hp-welcome-message h1 {
@@ -168,7 +168,7 @@ body {
       z-index: 1; }
     body .main-wrapper #about-us-page-wrapper {
       position: relative;
-      background-image: url("../img/about_us_background.jpg");
+      background-image: url("../../img/about_us_background.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
@@ -203,11 +203,11 @@ body {
             background-position: center;
             opacity: 0; }
           body .main-wrapper #about-us-page-wrapper .about-us-page-content .container #about-us-first-pic {
-            background-image: url(../img/about_us_wine.jpg); }
+            background-image: url(../../img/about_us_wine.jpg); }
           body .main-wrapper #about-us-page-wrapper .about-us-page-content .container #about-us-second-pic {
-            background-image: url(../img/about_us_food.jpg); }
+            background-image: url(../../img/about_us_food.jpg); }
           body .main-wrapper #about-us-page-wrapper .about-us-page-content .container #about-us-third-pic {
-            background-image: url(../img/about_us_coffe.jpg); }
+            background-image: url(../../img/about_us_coffe.jpg); }
         body .main-wrapper #about-us-page-wrapper .about-us-page-content .container.active .about-us-pic {
           opacity: 1;
           -webkit-transition: opacity 800ms linear;
@@ -234,7 +234,7 @@ body {
       width: 100%;
       background-color: #333333;
       overflow: hidden;
-      background-image: url("../img/gallery_background.png");
+      background-image: url("../../img/gallery_background.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
@@ -283,56 +283,56 @@ body {
               transition: transform 200ms linear;
               opacity: .95; }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image1 {
-              background-image: url(../img/Carousel/img1.jpg);
+              background-image: url(../../img/Carousel/img1.jpg);
               -webkit-transform: rotateY(0deg) translateZ(90rem);
               -moz-transform: rotateY(0deg) translateZ(90rem);
               -ms-transform: rotateY(0deg) translateZ(90rem);
               -o-transform: rotateY(0deg) translateZ(90rem);
               transform: rotateY(0deg) translateZ(90rem); }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image2 {
-              background-image: url(../img/Carousel/img2.jpg);
+              background-image: url(../../img/Carousel/img2.jpg);
               -webkit-transform: rotateY(45deg) translateZ(90rem);
               -moz-transform: rotateY(45deg) translateZ(90rem);
               -ms-transform: rotateY(45deg) translateZ(90rem);
               -o-transform: rotateY(45deg) translateZ(90rem);
               transform: rotateY(45deg) translateZ(90rem); }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image3 {
-              background-image: url(../img/Carousel/img3.jpg);
+              background-image: url(../../img/Carousel/img3.jpg);
               -webkit-transform: rotateY(90deg) translateZ(90rem);
               -moz-transform: rotateY(90deg) translateZ(90rem);
               -ms-transform: rotateY(90deg) translateZ(90rem);
               -o-transform: rotateY(90deg) translateZ(90rem);
               transform: rotateY(90deg) translateZ(90rem); }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image4 {
-              background-image: url(../img/Carousel/img4.jpg);
+              background-image: url(../../img/Carousel/img4.jpg);
               -webkit-transform: rotateY(135deg) translateZ(90rem);
               -moz-transform: rotateY(135deg) translateZ(90rem);
               -ms-transform: rotateY(135deg) translateZ(90rem);
               -o-transform: rotateY(135deg) translateZ(90rem);
               transform: rotateY(135deg) translateZ(90rem); }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image5 {
-              background-image: url(../img/Carousel/img5.jpg);
+              background-image: url(../../img/Carousel/img5.jpg);
               -webkit-transform: rotateY(180deg) translateZ(90rem);
               -moz-transform: rotateY(180deg) translateZ(90rem);
               -ms-transform: rotateY(180deg) translateZ(90rem);
               -o-transform: rotateY(180deg) translateZ(90rem);
               transform: rotateY(180deg) translateZ(90rem); }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image6 {
-              background-image: url(../img/Carousel/img6.jpg);
+              background-image: url(../../img/Carousel/img6.jpg);
               -webkit-transform: rotateY(225deg) translateZ(90rem);
               -moz-transform: rotateY(225deg) translateZ(90rem);
               -ms-transform: rotateY(225deg) translateZ(90rem);
               -o-transform: rotateY(225deg) translateZ(90rem);
               transform: rotateY(225deg) translateZ(90rem); }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image7 {
-              background-image: url(../img/Carousel/img7.jpg);
+              background-image: url(../../img/Carousel/img7.jpg);
               -webkit-transform: rotateY(270deg) translateZ(90rem);
               -moz-transform: rotateY(270deg) translateZ(90rem);
               -ms-transform: rotateY(270deg) translateZ(90rem);
               -o-transform: rotateY(270deg) translateZ(90rem);
               transform: rotateY(270deg) translateZ(90rem); }
             body .main-wrapper #gallery-wrapper .gallery-content #carousel-wrapper #carousel-container #image8 {
-              background-image: url(../img/Carousel/img8.jpg);
+              background-image: url(../../img/Carousel/img8.jpg);
               -webkit-transform: rotateY(315deg) translateZ(90rem);
               -moz-transform: rotateY(315deg) translateZ(90rem);
               -ms-transform: rotateY(315deg) translateZ(90rem);
@@ -358,7 +358,7 @@ body {
         width: 33%;
         text-align: right; }
       body footer .footer-info .footer-logo {
-        background-image: url(../img/logo.svg);
+        background-image: url(../../img/logo.svg);
         width: 34%;
         height: 7rem;
         background-size: contain;

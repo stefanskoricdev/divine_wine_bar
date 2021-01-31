@@ -4,7 +4,7 @@ $fontColor: rgba(171, 145, 120, 1);
     font-size: 40%;
 }
 body{
-    @import "partials/header_mobile";
+    @import "../partials/header_mobile";
     .main-wrapper{
         padding-top: 15rem;
         #home-page-wrapper{
@@ -53,21 +53,5 @@ body{
             }
         }
     }
-    footer{
-        height: 12rem;
-        border-top: .2rem solid $fontColor;
-        .footer-info{
-            address{
-                text-align: center;
-                width: 40%;
-            }
-            .footer-logo{
-                width: 30%;
-            }
-            .footer-contact-info{
-                width: 40%;
-                text-align: center;
-            }
-        }
-    }
+    @import "../partials/footer_mobile";
 }
