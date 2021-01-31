@@ -139,7 +139,7 @@ body {
         width: 100%;
         height: 90rem;
         opacity: 0;
-        background-image: url("../img/home_page_pic.png");
+        background-image: url("../img/home_page_pic.jpg");
         background-size: cover;
         background-position: center; }
     body .main-wrapper #home-page-wrapper.active #hp-welcome-message p, body .main-wrapper #home-page-wrapper.active #hp-welcome-message h1 {
@@ -168,7 +168,7 @@ body {
       z-index: 1; }
     body .main-wrapper #about-us-page-wrapper {
       position: relative;
-      background-image: url("../img/about_us_background.png");
+      background-image: url("../img/about_us_background.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
@@ -275,6 +275,7 @@ body {
               opacity: 1;
               background-size: cover;
               background-repeat: no-repeat;
+              background-position: center;
               -webkit-transition: transform 200ms linear;
               -moz-transition: transform 200ms linear;
               -ms-transition: transform 200ms linear;
