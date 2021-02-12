@@ -15,7 +15,9 @@
     font-size: 3rem; }
 
 body {
-  margin: 0;
+  width: 100%;
+  max-width: 1950px;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   background-color: #333333;

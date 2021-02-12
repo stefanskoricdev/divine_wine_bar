@@ -22,7 +22,9 @@ $fontColor: rgba(171, 145, 120, 1);
     }
 }
 body{
-    margin: 0;
+    width: 100%;
+    max-width: 1950px;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     background-color: $mainColor;
