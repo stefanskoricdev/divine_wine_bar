@@ -1,0 +1,36 @@
+*{
+    font-size: 50%;
+}
+body{
+    header.active{
+        #logo-header{
+            width: 15rem;
+        }
+        .main-nav{
+            justify-content: flex-start;
+            a{
+                font-size: 3rem;
+            }
+        }
+    }
+    .main-wrapper{
+        .contact-welcome-wrapper{
+            position: relative;
+            z-index: 0;
+            .contact-welcome-msg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 96%;
+                height: 96%;
+                margin: 0;
+                padding: 2%;
+                z-index: 1;
+                background-color: rgba(51, 51, 51, .8);
+            }
+            .contact-welcome-pic{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+* {
+  font-size: 50%; }
+
+body header.active #logo-header {
+  width: 15rem; }
+body header.active .main-nav {
+  justify-content: flex-start; }
+  body header.active .main-nav a {
+    font-size: 3rem; }
+body .main-wrapper .contact-welcome-wrapper {
+  position: relative;
+  z-index: 0; }
+  body .main-wrapper .contact-welcome-wrapper .contact-welcome-msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 96%;
+    height: 96%;
+    margin: 0;
+    padding: 2%;
+    z-index: 1;
+    background-color: rgba(51, 51, 51, 0.8); }
+  body .main-wrapper .contact-welcome-wrapper .contact-welcome-pic {
+    width: 100%; }
+
+/*# sourceMappingURL=contact_tablet.css.map */
