@@ -7,6 +7,7 @@
     <title>DiVine Wine Bar</title>
     <link rel="stylesheet" href="assets/style/contact_page/contact_main.css">
     <!---Default styling-->
+    <script src="https://kit.fontawesome.com/d025e4f1ed.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -43,12 +44,52 @@
             <div class="contact-welcome-msg">
                 <h1 class="page-title">Contact us</h1>
                 <h2>Feel free to contact us. Let us lead you into the world of wine, great food and lots of fun.</h2>
+                <div class="contact-info">
+                    <a href=""><i class="fas fa-phone-square-alt"></i><span>+38765/729-018</span></a>
+                    <a href="mailto:something@something.com" target="_blank"><i
+                            class="fas fa-envelope-open-text"></i><span>Email</span></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i
+                            class="fab fa-facebook"></i><span>Facebook</span></a>
+                    <a href="https://www.instagram.com" target="_blank"><i
+                            class="fab fa-instagram"></i><span>Instagram</span></a>
+                    <a href="https://www.twitter.com" target="_blank"><i
+                            class="fab fa-twitter"></i><span>Twitter</span></a>
+                </div>
             </div>
             <div class="contact-welcome-pic">
                 <!--Will display image in background-->
             </div>
         </div>
+        <div class="map-wrapper">
+            <h2>How to find us</h2>
+            <div id="map">
+                <!--Google map will be introduced in this div-->
+            </div>
+            <script async
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkfa-aMs5VPpDncY-9r8_Kd1l9KpkyS_4&callback=initMap">
+            </script>
+        </div>
     </section>
+    <footer>
+        <div class="footer-info">
+            <address>Sime Solaje 1b,</br> 78000 Banja Luka</address>
+            <div class="footer-logo">
+                <!--Pic will be in background-->
+            </div>
+            <div class="footer-contact-info">
+                <p>Phone: +38765 00 00 00 0</p>
+                <p>Email: something@something.com</p>
+            </div>
+        </div>
+        <div id="footer-social-network">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="assets/script/navigation.js"></script>
+    <script src="assets/script/mobile_navigation.js"></script>
+    <script src="assets/script/google_map.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 * {
   font-size: 62.5%;
-  color: #ab9178; }
+  color: #ab9178;
+  font-family: "Raleway", sans-serif; }
   * a {
     font-family: "Raleway", sans-serif;
     text-decoration: none;
